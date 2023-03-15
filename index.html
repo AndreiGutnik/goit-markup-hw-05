@@ -22,9 +22,11 @@
   <header class="header">
     <div class="container header-container">
       <nav class="nav">
-        <a href="./index.html" class="logo"><span class="logo-accent">Web</span>Studio</a>
+        <a href="./index.html" class="logo logo-nav"><span class="logo-accent">Web</span>Studio</a>
         <ul class="nav-list list">
-          <li class="nav-item"><a href="./index.html" class="nav-link">Studio</a></li>
+          <li class="nav-item current">
+            <a href="./index.html" class="nav-link">Studio</a>
+          </li>
           <li class="nav-item"><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
           <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
         </ul>
@@ -45,7 +47,7 @@
   <main>
     <section class="hero">
       <h1 class="hero-title">Effective Solutions for Your Business</h1>
-      <button type="button" class="hero-button">Order Service</button>
+      <button type="button" class="hero-button" data-modal-open>Order Service</button>
     </section>
     <section class="features">
       <div class="container">
@@ -322,6 +324,15 @@
         </ul>
       </div>
     </section>
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<a href="" class="modal-close-link" data-modal-close>
+					<svg class="modal-icon" width="8" height="8">
+						<use href="./images/icons2.svg#close"></use>
+					</svg>
+				</a>
+			</div>
+    </div>
   </main>
   <!-- Footer -->
   <footer class="footer">
@@ -369,6 +380,7 @@
 
     </div>
   </footer>
+	<script src="./js/modal.js"></script>
 </body>
 
 </html>
