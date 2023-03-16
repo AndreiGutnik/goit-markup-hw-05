@@ -54,7 +54,7 @@ body {
 
 .logo-nav {
     padding-top: 24px;
-    padding-bottom: 28px;
+    padding-bottom: 24px;
 }
 
 .logo-accent {
@@ -87,7 +87,7 @@ body {
 
 .current::after {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     content: "";
     width: 100%;
@@ -99,7 +99,7 @@ body {
 .nav-link {
     display: block;
     padding-top: 24px;
-    padding-bottom: 28px;
+    padding-bottom: 24px;
 
     color: var(--primary-font-color);
     font-weight: 500;
@@ -107,6 +107,10 @@ body {
     letter-spacing: 0.02em;
 
     transition: color 250ms var(--action);
+}
+
+.current>.nav-link{
+	color: var(--accent-font-color);
 }
 
 .nav-link:hover,
@@ -131,7 +135,7 @@ body {
 .address-link {
     display: block;
     padding-top: 24px;
-    padding-bottom: 28px;
+    padding-bottom: 24px;
 
     color: var(--primary-font-color);
     line-height: 1.5;
@@ -521,8 +525,9 @@ body {
     background-color: rgba(46, 47, 66, 0.4);
 
     opacity: 1;
+		visibility: visible;
 
-    transition: opacity 250ms var(--action);
+    transition: opacity 250ms var(--action), visibility 250ms var(--action);
 }
 
 .backdrop.is-hidden {
@@ -553,7 +558,7 @@ body {
     transition: transform 250ms var(--action);
 }
 
-.modal-close-link {
+.modal-close-btn {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -578,9 +583,11 @@ body {
     fill: currentColor;
 }
 
-.modal-close-link:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
     background-color: var(--accent-font-color);
     color: var(--secondary-font-color);
+		border-color: transparent;
 }
 
 /* ----------------Footer---------------- */
